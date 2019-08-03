@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>email</display-name>
+
+	<servlet>
+		<servlet-name>userController</servlet-name>
+		<servlet-class>com.hqyj.yjxt.system.user.controller.UserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userController</servlet-name>
+		<url-pattern>/userController</url-pattern>
+	</servlet-mapping>
+	<!--以下是发件箱Controller-->
+	<servlet>
+		<servlet-name>SendController</servlet-name>
+		<servlet-class>com.hqyj.yjxt.system.send.controller.SendController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendController</servlet-name>
+		<url-pattern>/SendController</url-pattern>
+	</servlet-mapping>
+	<!--以下是收件箱Controller-->
+	<servlet>
+		<servlet-name>SJXController</servlet-name>
+		<servlet-class>com.hqyj.yjxt.system.rec.controller.SJXController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SJXController</servlet-name>
+		<url-pattern>/SJXController</url-pattern>
+	</servlet-mapping>
+	
+	<!--以下是草稿箱Controller-->
+	<servlet>
+		<servlet-name>CGXController</servlet-name>
+		<servlet-class>com.hqyj.yjxt.system.cgx.controller.CGXController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CGXController</servlet-name>
+		<url-pattern>/CGXController</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
